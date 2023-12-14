@@ -4,6 +4,7 @@ const useSendDeviceDiagnosticAnswers = (payload: any) => {
   const finishChecklist = useCallback(async () => {
     try {
       const response = await sendDeviceDiagnosticAnswers(payload)
+      return response
     } catch (error: any) {
       throw new Error(error);
     } finally {
